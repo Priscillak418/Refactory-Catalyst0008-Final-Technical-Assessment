@@ -1,0 +1,143 @@
+body {
+    background-color: #1b1e3c;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.custom-select,
+.form-control {
+    box-shadow: inset 0 1px 1px 0 rgb(0 0 0 / 4%) !important;
+    background-color: #FAFBFC;
+}
+
+.section {
+    padding: 50px 0;
+    background: rgba(0, 0, 0, 0.644);
+    width: auto;
+    height: auto;
+}
+
+small {
+    color: #ff0000;
+    font-size: 10px;
+}
+
+input,
+select {
+    padding: 5px 5px 10px 5px;
+    border: 1px solid lightgrey;
+    /* border-radius: 15px !important; */
+    margin: 0px 0px 10px 0px;
+    width: 200px;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px
+}
+
+input:focus,
+select:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #3330fe;
+    outline-width: 0
+}
+
+
+/* FORM HEADERS AND STUFF LIKE THAT//////////////////////////////////////////////////// */
+
+#mega {
+    text-align: center;
+    /* color:#f0ad4e; */
+    color: #231F20;
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 1.0%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#mini {
+    text-align: center;
+    /* color:#231F20; */
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 1.0%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main {
+    padding: 30px 0 20px 0;
+}
+
+/* label {
+    display: none;
+} */
+
+.form {
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 6%), 0 1px 2px 0 rgb(0 0 0 / 4%);
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 15px;
+}
+
+input,
+optgroup,
+select,
+textarea {
+    font-size: 15px !important;
+}
+
+/* image in form */
+.logo{
+    width: 520px;
+    align-items: center;
+}
+
+/* ////////////////////////// EDIT BUTTON COLOR///////////////////////////////////// */
+
+button.btn.btn-block {
+    margin-top: 5%;
+  
+    border-color: none;
+    color: white;
+    /* font-size: 20px; */
+}
+
+@media(max-width:500px) {
+    .row {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+}
+
+
+/* This is for the footer */
+
+footer {
+    bottom: 0; 
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+.footerthing {
+    /* display: inline-flex; */
+    margin-left: 50%;
+    margin-right: 50%; 
+    background-color: none;
+ 
+}
+
+.wampet {
+    color: #231F20;
+    background-color: none;
+    padding:3px 0px 0px 0px ;
+}
+.bg-light.text-center.text-lg-start{
+    background-color: none;
+}

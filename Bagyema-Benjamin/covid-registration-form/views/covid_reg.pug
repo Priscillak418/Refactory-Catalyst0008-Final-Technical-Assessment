@@ -1,0 +1,53 @@
+doctype html
+html(lang='en')
+	head
+		title=title
+		script(
+		src='validation.js'
+		)
+		link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+		link(rel='stylesheet' href='registration.css')
+		meta(charset='UTF-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+	body
+		header.card-header
+			img(src='form-header-image.png')
+			h2 Ministry of Health
+			h3
+				h6=title
+		if alert=="error"
+			div.alert.alert-danger Something went wrong, try again!
+		form(method='POST' action='/register')
+			div.form-row
+				div.col.form-group
+					input#fname.form-control(type='text' placeholder='First Name' name='fname')
+				div.col.form-group
+					input#lname.form-control(type='text' placeholder='Last Name' name='lname') 
+			div.form-row
+				div.col.form-group
+					label Date of Birth
+					input#dob.form-control(type='date' name='dob')
+			div.form-row
+				div.col.form-group
+					input#residence.form-control(type='text' placeholder='Place of Residence' name='email')
+			div.form-row
+				div.col.form-group
+					input#occupation.form-control(placeholder='Occupation' name='occupation')
+				div.col.form-group
+					input.form-control(type='text' placeholder='Username' name='username')
+			div.form-row
+				div.col.form-group
+					label Gender
+						input(type='radio' value='1') Male
+						input(type='radio' value='2') Female
+				div.col.form-group
+					select#category.form-control(type='text' placeholder='Category')
+						option(value='returnee') Returnee
+						option(value='contact') Contact
+						option(value='alert') Alert
+						option(value='volunteer') Volunteer
+			div.form-row
+				div.col.form-group
+					button.btn.btn-primary Register
+
+

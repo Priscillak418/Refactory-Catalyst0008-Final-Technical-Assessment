@@ -1,0 +1,75 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title=title
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="style.css")
+      
+    body
+        .container 
+            form#covForm(action="/" method='POST' name='covForm')
+                .row 
+                    img(src="/system-images/form-header-image.png", alt="image")
+                    .col-md-12 
+                        h3 Ministry of Health 
+                        h4 Covid-19 (CORONA-VIRUS)
+                        h5 Virus-Test Registration Form
+                        if alert=='success'
+                            div.alert.alert-success Registered successfully!
+                        if alert == 'error'
+                            div.alert.alert-error Sorry something went wrong!
+                    .col-md-6
+                        .form-field
+                            label(for='surname') Surname
+                            input.form-control(type='text' name='surname')
+                            small
+                    .col-md-6
+                        .form-field     
+                            label(for='givenname') Given Name                
+                            input.form-control(type='text' name='givenname')
+                            small
+                    .col-md-6
+                        .form-field
+                            label(for='dob') Date of Birth                 
+                            input.form-control#dob(type='date' name='dob')
+                            small
+                    .col-md-6
+                        .form-field
+                            label(for='res') Place of residence                   
+                            input.form-control(type='text' name='res')
+                            small
+                    .col-md-6
+                        .form-field
+                            label(for='occ') Occupation               
+                            input.form-control(type='text' name='occupation')
+                            small
+                    .col-md-6
+                        .form-field
+                            label(for='nationality') Nationality                                            
+                            input#dob.form-control(type='text' name='nationality')
+                            small
+                    .col-md-12 Gender
+                    .col-md-6
+                        input(type='radio' name='gender' value='male' checked="checked") 
+                        label(for='male') Male
+                    .col-md-6
+                        input(type='radio' name='gender' value='female')
+                        label(for='female') Female
+                    .col-md-12
+                        .form-field
+                            label(for='category') Category Field
+                            br
+                            select(name="field" id="field")
+                                option(value="none" selected disabled hidden) --Select Category--
+                                option Returnee
+                                option Contact
+                                option Alert
+                                option Volunteer
+                            small
+                            br
+                            br
+                    button.btn.btn-primary(type='submit') Register
+        script(src="/validate.js") 

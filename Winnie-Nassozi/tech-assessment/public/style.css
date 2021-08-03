@@ -1,0 +1,35 @@
+body{
+    margin: 30px;
+}
+
+form{
+    margin: auto;
+    border: 2px solid black;
+    width: 70%;
+    padding: 2px;
+}
+.row{
+text-align: left;
+margin: auto;
+}
+img{
+    width: 100%;
+}
+h4,h5,h3{
+    text-align: center;
+}
+small{
+    color: red;
+}
+select{
+    width: 80%;
+    text-align: center;
+}
+button{
+   margin-left: 600px;
+   width: 20%;
+   padding: 0px;
+}
+label{
+    font-weight: bold;
+}
