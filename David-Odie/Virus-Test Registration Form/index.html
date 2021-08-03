@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/styles.css">
+    <title>Virus-Test Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="" name="testForm" onsubmit="" id="myForm">
+            <div class="row">
+                <img src="./public/system-images/form-header-image.png">
+                <div class=" col-md-12" style="align-items: center;">
+                    <h4>Ministry of Health</h4>
+                    <h4 class="covid">Covid-19 (CORONA-VIRUS)</h4>
+                    <h4>Virus -Test Registration Form</h4>
+                </div>   
+                <div class="alert alert-success alert-dismissible fade show" role="alert" id="alertt">
+                    <strong>Registration was successful !</strong> 
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                <div class=" col-md-6">
+                    <label for="">Surname</label>
+                    <input type="text"class="form-control" name="surName">
+                    <span id="surEr" class="error"></span>
+                </div>
+                <div class=" col-md-6">
+                    <label for="">Given Name</label>
+                    <input type="text"class="form-control" name="givenName">
+                    <span id="givenErr" class="error"></span>
+                </div>
+                <div class=" col-md-6">
+                    <label for="">Date of Birth</label>
+                    <input type="date"class="form-control" name="dob">
+                    <span id="dateBrr" class="error"></span>
+                </div>
+                <div class=" col-md-6">
+                    <label for="">Place of Residence</label>
+                    <input type="text"class="form-control" name="residence">
+                    <span id="residenceErr" class="error"></span>
+                </div>
+                <div class=" col-md-6">
+                    <label for="">Occupation</label>
+                    <input type="text"class="form-control" name="occupation">
+                    <span id="occupErr" class="error"></span>
+                </div>
+                
+                <div class=" col-md-6">
+                    <label for="">Nationality</label>
+                    <input type="text"class="form-control" name="nation">
+                    <span id="nationErr" class="error"></span>
+                </div> 
+                <div class="col-md-12" style="border-bottom:1px solid gray">Gender</div>
+                <div class="col-md-6">
+                    <label for="">Male</label>
+                    <input type="radio" name = "gender" value="male">
+                </div>
+                <div class="col-md-6">
+                    <label for="">Female</label>
+                    <input type="radio" name= "gender" value="female">
+                </div>
+                <span id="gendErr" class="error"></span>
+                <div class="col-md-12">
+                    <label> Category</label>
+                    <select class="form-select" aria-label="Default select example" name="category">
+                        <option selected style="align-items: center;">--Select Category --</option>
+                        <option value="returnee">Returnee</option>
+                        <option value="contact">Contact</option>
+                        <option value="alert">Alert</option>
+                        <option value="volunteer">Volunteer</option>
+                    </select>
+                     <span id="categErr" class="error"></span>
+                </div>
+        
+               <div class="col-md-12">
+                <button class="btn btn-primary" type="submit">Register</button>
+               </div>               
+            </div>             
+        </form>         
+    </div>
+</body>
+<script src="./public/formValidation.js"></script>
+<script src="./public/js/bootstrap.bundle.js"></script>
+</html>
