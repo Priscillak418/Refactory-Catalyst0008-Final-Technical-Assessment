@@ -1,0 +1,18 @@
+body{
+    margin: 30px 320px;
+    border: 1px solid;
+}
+
+img{
+    height: 80px;
+    width: 100%;
+    margin: 0;
+}
+
+select{
+    text-align: center;
+}
+
+button{
+    width: 250px;
+}

@@ -1,0 +1,85 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet" type="text/css" href="/style.css")
+
+        title= title
+
+    body
+        div.b_image(style="background:url('https://media.istockphoto.com/vectors/cartoon-design-of-the-flag-of-uganda-vector-id472335133?k=6&m=472335133&s=612x612&w=0&h=X0iYg1eQas2mDMobdv-vU53ieRluaQAvXgUGHQ8i-wE=');background-size: contain;" )
+            div.offset-md-5
+                img.resize(src="data:image/form-header-image.png
+
+        
+        form.container-fluid(method="POST" action="/registerPatient" id="form" name="form")
+            if alert =='success'
+                div.alert.alert-success Registration sucessful
+            if alert =='error'
+                div.alert.alert-danger An error occured, failed to add patient
+            br 
+            div.col-lg-10.offset-md-1
+                h4 Ministry of Health
+                h1 COVID 19(CORONA VIRUS)
+                h4 Virus-Test Registration Form 
+                div.row
+                    div.col
+                        div.form-field
+                            label Surname
+                            input(name="surname" id="surname")
+                            small(style="color:red;")
+
+                    div.col
+                        div.form-field
+                            label Given Name
+                            input(name="givenName" id="givenName")
+                            small(style="color:red; margin-top:-5px;")
+                div.row
+                    div.col
+                        div.form-field
+                            label Date of Birth
+                            input(name="dob" id="dob" type="date") 
+                            small(style="color:red; margin-top:-5px;")
+                
+                    div.col
+                        label Place of Residence
+                        div.form-field
+                            input(name="residence" id="residence")
+                            small(style="color:red; margin-top:-5px;")
+                div.row
+                    div.col
+                        label Occupation
+                        div.form-field
+                            input(name="occupation" id="occupation")
+                            small(style="color:red; margin-top:-5px;")
+                    div.col
+                        div.form-field 
+                            label Nationality
+                            input(name="nationality" id="nationality")
+                            small(style="color:red; margin-top:-5px;")
+
+                h5(style="margin-bottom:-10px;") Gender
+                hr
+                div(style="margin-top:-10px;")
+                    div.form-check
+                        input(class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked)
+                        h6(class="form-check-label" for="flexRadioDefault1") Male
+                    
+                    div.form-check(style="margin-left: 70px;")
+                        input(class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2")
+                        h6(class="form-check-label" for="flexRadioDefault2") Female
+
+                div.form-row(style="margin-top:50px;")
+                        div.col.form-group
+                            label Category
+                            select(name="select" id="select")
+                                option(value="none" selected disabled hidden) --Select Category--
+                                option
+                            small(style="color:red; margin-top:-5px;")
+
+                div.form-row(style="margin-bottom:-10px;")
+
+                    div.col.form-group
+                        center
+                            button.btn.btn-danger.btn-lg(type="submit") Submit
+        script(src="public/validate.js")                 
