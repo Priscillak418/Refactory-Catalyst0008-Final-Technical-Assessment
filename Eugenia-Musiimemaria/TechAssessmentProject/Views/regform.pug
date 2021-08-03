@@ -5,12 +5,13 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous')
+        link(rel="stylesheet", href="/css/regform.css")
         title Patient Form
-    body(style="margin: 30px 320px; border: 1px solid;")
+    body
         .container-fluid
             .row.g-3.justify-content-center.align-items-center.pt-4.pb-5
                 .image.col-md-7
-                img(class="img-fluid" src="/images/form-header-image.png", alt="Uganda flag" style="height: 80px; widith: 100%; margin: 0;")
+                img(class="img-fluid" src="/images/form-header-image.png", alt="Uganda flag")
                 .col-md-9
                     .text-center.border-bottom.mb-3 
                         header 
@@ -58,7 +59,7 @@ html(lang="en")
                                             | Female
                             .col-md-12
                                 label.form-label(for='fieldCategory') Category Field
-                                select.form-select(name="field" id="field" style="text-align: center;")
+                                select.form-select(name="field" id="field")
                                     option(selected='' value='--Select Category--') --Select Category--
                                     option Returnee
                                     option Contact
@@ -66,7 +67,7 @@ html(lang="en")
                                     option Volunteer
                                 small#errorField 
                             .d-grid.mx-flex.justify-content-md-end
-                                button#submit.btn.btn-lg.btn-primary(type='submit' style="width: 250px;")
+                                button#submit.btn.btn-lg.btn-primary(type='submit')
                                     | Register
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4' crossorigin='anonymous')
     script(src="/js/regformval.js")
