@@ -1,0 +1,74 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/style.css")
+        title= title  
+    body
+        div.row.d-flex.justify-content-center
+            div.col-md-6.col-md-3.col-md-offset-6.reg-form
+            
+                form(method="POST" action='/register' name='register' id="register")
+
+                    img(src="../images/form-header-image.png")
+                    h4 Ministry of Health 
+                    h4 COVID-19 (CORONA VIRUS)  
+                    h4 Virus-Test Registration Form
+                    
+                    if alert == "success"
+                        div.alert.alert-success Registration was successfull
+                    if alert == "error"
+                        div.alert.alert-danger An error occurred
+                    div.form-row
+                        div.form-group.col
+                            label Surname
+                            input.form-control(type="text" name='surname' id="surname") 
+                            small(style="color:red;" id="unameErr") 
+                        div.form-group.col
+                            label Given name
+                            input.form-control(type="text" name='givenname' id="given-name")
+                            small(style="color:red;" id="nameErr")   
+                    div.form-row
+                        div.form-group.col
+                            label Date of Birth
+                            input.form-control(type="date" name="dob" id="dob")
+                            small(style="color:red;" id="unameErr")  
+                        div.form-group.col
+                            label Place of residence
+                            input.form-control(type='address' name='address' id="address")
+                            small(style="color:red;" id="unameErr") 
+                    div.form-row
+                        div.form-group.col
+                            label Occupation
+                            input.form-control(type="text" name='occupation' id="occupation") 
+                            small(style="color:red;" id="unameErr") 
+                        div.form-group.col
+                            label Nationality
+                            input.form-control(type="text" name='nationality' id="nationality")
+                            small(style="color:red;" id="nameErr")
+                    div.form-row
+                        div.col-12
+                        label Gender 
+                        hr
+                    div.form-row
+                        div.form-group.col
+                            input(type="radio" name="gender" value="male" checked="checked" id="gender") 
+                            | Male
+                        small(style="color:red;" id="nameErr")
+                        div.form-group.col
+                            input(type="radio" name="gender" value="female" id="gender")
+                            | Female
+                        small(style="color:red;" id="nameErr")
+                    div.form-row
+                        div.form-group.col
+                            label Category
+                            select.form-control(name="category" id="category")
+                                option(value="") -- Select Category –
+                                option(value="returnee") Returnee
+                                option(value="contact") Contact
+                                option(value="alert") Alert
+                                option(value="volunteer") Volunteer
+                            small(style="color:red;" id="unameErr")     
+                    div.form-row
+                        div.col.form-group
+                            button.btn.btn-primary.btn-block.reg-bt(type="submit") Register
