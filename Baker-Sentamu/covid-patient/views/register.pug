@@ -1,11 +1,78 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title=title
+extends layout
 
-        //- CSS
-        link(rel="stylesheet", href="/css/style.css")
-        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css")
+block content 
+    
+    .container-fluid
+        .row
+            
+            .col-lg-6.col-md-8.col-sm-12.mx-auto(style="background:#fff; padding:0")
+                img.img-responsive(src='/img/form-header-image.png')
+                .subtitle Ministry Of Health Uganda
+                .title COVID-19 (CORONA VIRUS)
+                .subtitle Virus Test Registration Form
+
+                form.register(name='registration' action='/'  method='POST')
+                    .form-row
+                        .col-md-6.col-sm-12      
+                            label Surname                      
+                            input#surname.form-control(type='text' name='surname')
+                            .show-error
+                                small#surname-error
+                                small.general-error
+                        .col-md-6.col-sm-12                           
+                            label Given Name                      
+                            input#givename.form-control(type='text' name='givename')
+                            .show-error
+                                small#givename-error
+                                small.general-error
+                    .form-row
+                        .col-md-6.col-sm-12 
+                            label Date Of Birth                             
+                            input#dob.form-control(type='date'  min="1871-08-01" max="2020-08-01" onfocus="(this.type='date')" name='dob')
+                            .show-error 
+                                small#dob-error
+                                small.general-error                            
+                        .col-md-6.col-sm-12     
+                            label Place Of Residence                         
+                            input#residence.form-control(type='text' name='residence')
+                            .show-error
+                                small#residence-error
+                                small.general-error
+                    .form-row
+                        .col-md-6.col-sm-12                            
+                            label Occupation                        
+                            input#occupation.form-control(type='text' name='occupation')
+                            .show-error
+                                small#occupation-error
+                                small.general-error
+                        .col-md-6.col-sm-12                            
+                            label Nationality                      
+                            input#nationality.form-control(type='text' name='nationality')
+                            .show-error
+                                small#nationality-error
+                                small.general-error
+                    .form-row
+                        .col-12
+                             label Choose Gender 
+                                br
+                            .custom-control.custom-radio.custom-control-inline
+                                input.custom-control-input(type="radio" id="male" name="male" default)
+                                label.custom-control-label(for="male") Male   
+                            .custom-control.custom-radio.custom-control-inline
+                                input.custom-control-input(type="radio" id="female" name="female")
+                                label.custom-control-label(for="male") Female  
+                                br        
+
+                    .form-row
+                        .col-12            
+                            select.custom-select(name='category')
+                                option(value='') -- Select Category --
+                                option(value="returnee") Returnee
+                                option(value="Contact") Contact
+                                option(value="Alert") Alert
+                                option(value="Volunteer") Volunteer         
+                            
+                    .form-row
+                        .col.form-group
+                            br
+                            button#sumbit-washer.btn.btn-primary.btn-block(type="button" onclick="checkEmpty()") Register
