@@ -63,7 +63,7 @@ var checkDate = () => {
 
     var birthDate = dob.value.trim();
 
-    if (!requiredField(birthDate)) {
+    if (birthDate === null) {
         errorMsg(dob, ' Required field');
     } else {
         valid = true;
@@ -108,10 +108,10 @@ var checkNationality = () => {
         max = 20;
     var PatientNat  = nationality.value.trim();
 
-    if (!requiredField(PatientOccup)) {
-        errorMsg(occupation, ' Required field');
-    } else if (!inputLength(PatientOccup.length, min, max)) {
-        errorMsg(occupation, `Username must be between ${min} and ${max} characters.`)
+    if (!requiredField(PatientNat)) {
+        errorMsg(nationality, ' Required field');
+    } else if (!inputLength(PatientNat.length, min, max)) {
+        errorMsg(nationality, `Username must be between ${min} and ${max} characters.`)
     } else {
         valid = true;
     }
