@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous')
+        link(rel="stylesheet", href="/css/regform.css")
+        title Patient Form
+    body
+        .container-fluid
+            .row.justify-content-center.align-items-center
+                .image
+                img(class="img-fluid" src="/images/form-header-image.png", alt="Uganda flag")
+                .col-md-9.pt-4.pb-5.g-3
+                    .text-center.border-bottom.mb-3 
+                        header 
+                            h5 Ministry of Health
+                            h3.fw-bolder COVID-19 (CORONA VIRUS)
+                            h5 Virus-Test Registration Form
+                    .form-wrapper 
+                        form#patientRegister.row.g-3(action="/" method="POST" onsubmit="return validatePatient(event)")
+                            .col-md-6
+                                label.form-label(for='surname') Surname
+                                input#surname.form-control(type='text' placeholder='Surname' name='surname')
+                                small#errorSurname
+                            .col-md-6
+                                label.form-label(for='givenName') Given name
+                                input#givenName.form-control(type='text' placeholder='Given name' name='givenName')
+                                small#errorGivenName
+                            .col-md-6
+                                label.form-label(for='dob') Date of Birth
+                                input#dob.form-control(type='date' placeholder='Date of Birth' name='dob')
+                                small#errordob 
+                            .col-md-6
+                                label.form-label(for='residence') Place of Residence
+                                input#residence.form-control(type='text' placeholder='Place of Residence' name='residence')
+                                small#errorResidence
+                            .col-md-6
+                                label.form-label(for='occupation') Occupation
+                                input#occupation.form-control(type='text' placeholder='Occupation' name='occupation')
+                                small#errorOccupation 
+                            .col-md-6
+                                label.form-label(for='nationality') Nationality
+                                input#nationality.form-control(type='text' placeholder='Nationality' name='nationality')
+                                small#errorNationality
+                            .col-md-12
+                                .border-bottom
+                                    label.form-label(for='gender') Gender
+                                br
+                                .row 
+                                    .form-check.col-md-6.px-5
+                                        input#gender.form-check-input(type='radio' value="Male" name='gender' checked)
+                                        label.form-check-label(for='male')
+                                            | Male
+                                    .form-check.col-md-6.px-5
+                                        input#gender.form-check-input(type='radio' value="Female" name='gender')
+                                        label.form-check-label(for='female')
+                                            | Female
+                            .col-md-12
+                                label.form-label(for='fieldCategory') Category Field
+                                select.form-select(name="field" id="field")
+                                    option(selected='' value='--Select Category--') --Select Category--
+                                    option Returnee
+                                    option Contact
+                                    option Alert
+                                    option Volunteer
+                                small#errorField 
+                            .d-grid.mx-flex.justify-content-md-end
+                                button#submit.btn.btn-lg.btn-primary(type='submit')
+                                    | Register
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4' crossorigin='anonymous')
+    script(src="/js/regformval.js")
