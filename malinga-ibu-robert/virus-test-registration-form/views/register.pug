@@ -1,0 +1,78 @@
+doctype html
+head
+  title Virus-Test-Registration-form
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(rel='stylesheet' href='/css/bootstrap-4.6.0-dist/css/bootstrap-grid.css')
+  link(rel="stylesheet", href="/form.css", type="text/css")
+.container
+  center
+    if alert =='success'
+        div.alert.alert-success Registration Was successful! 
+    if alert =='error'
+        div.alert.alert-danger An error occured, failed to add information
+    form.reg(action='register' method='post' name='regform' onsubmit='return Validate();')
+      .row
+        img(src='/public/images/form-header-image.png' alt='')
+      h2 Ministry Of Health
+      h1
+        strong  COVID-19 (CORONA VIRUS)
+      h2 Virus-Test Registration form
+      .row
+        .col-md-6
+          label Surname
+          input.form-control(type='text' name='surname')
+          #snameErr.error
+        .col-md-6
+          label Given Name
+          input.form-control(type='text' name='givenname')
+          #gnameErr.error
+      .row
+        .col-md-6
+          label Date of Birth
+          input.form-control(type='date' name='dob' max='2020-12-01' onfocus="(this.type='date')")
+          #dobErr.error
+        .col-md-6
+          label Place of residence
+          input.form-control(type='text' name='por')
+          #porErr.error
+      .row
+        .col-md-6
+          label Occupation
+          input#occupation.form-control(type='text' name='occupation')
+          #occupErr.error
+        .col-md-6
+          label Nationality
+          input#nationality.form-control(type='text' name='nationality')
+          #natErr.error
+      .row
+        .col-md-6
+          label Gender
+          br
+      .row
+        .col-md-6
+          input#male(type='radio' name='gender' value='male')
+          |  Male
+        .col-md-6
+          input#female(type='radio' name='gender' value='female')
+          |  Female
+      .row
+        .col-md-12
+          label Category
+          select#category.form-control(name='category')
+            option(value='' selected='' disabled='') --------Select Category-------
+            option(value='returnee') Returnee
+            option(value='contact') Contact
+            option(value='alert') Alert
+            option(value='volunteer') Volunteer
+          #catErr.error
+      br
+      .row
+        .col-md-6
+        .col-md-6
+          button.btn.btn-primary.btn-block(type='submit') Register
+br
+br
+
+script(src='css/jquery-3.6.0.js')
+script(src='css/bootstrap-4.6.0-dist/js/bootstrap.bundle.js')
+script(src='/public/formval.js')

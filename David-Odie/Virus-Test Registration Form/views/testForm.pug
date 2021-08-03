@@ -1,0 +1,67 @@
+doctype html
+html(lang='en')
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/styles.css')
+    title Covid Virus Test Registration Form
+body
+    .container
+        form(action='/' method='POST' name='testForm')
+            .row
+                img(src='/system-images/form-header-image.png')
+                .col-md-12(style='align-items: center;')
+                    h4 Ministry of Health
+                    h4.covid Covid-19 (CORONA-VIRUS)
+                    h4 Virus -Test Registration Form
+                    #alertt.alert.alert-success.alert-dismissible.fade.show(role='alert')
+                        strong Registration was successful !
+                        button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+                .col-md-6
+                    label(for='surname') Surname
+                    input.form-control(type='text' name='surName')
+                    span#surEr.error
+                .col-md-6
+                    label(for='givenName') Given Name
+                    input.form-control(type='text' name='givenName')
+                    span#givenErr.error
+                .col-md-6
+                    label(for='DOB') Date of Birth
+                    input.form-control(type='date' name='dob')
+                    span#dateBrr.error
+                .col-md-6
+                    label(for='residence') Place of Residence
+                    input.form-control(type='text' name='residence')
+                    span#residenceErr.error
+                .col-md-6
+                    label(for='occupation') Occupation
+                    input.form-control(type='text' name='occupation')
+                    span#occupErr.error
+                .col-md-6
+                    label(for='nationality') Nationality
+                    input.form-control(type='text' name='nation')
+                    span#nationErr.error
+                // <hr>
+                .col-md-12(style='border-bottom:1px solid gray') Gender
+                .col-md-6
+                    label(for='male') Male &nbsp;
+                    input(type='radio' name='gender' value='male')
+                .col-md-6
+                    label(for='female') Female &nbsp;
+                    input(type='radio' name='gender' value='female')
+                span#gendErr.error
+                .col-md-12
+                    label(for='category')  Category
+                    select.form-select(aria-label='Default select example' name='category')
+                        option(selected='' style='align-items: center;') --Select Category --
+                        option(value='returnee') Returnee
+                        option(value='contact') Contact
+                        option(value='alert') Alert
+                        option(value='volunteer') Volunteer
+                    span#categErr.error
+                .col-md-12
+                    button.btn.btn-primary(type='submit') Register
+        script(src='/formValidation.js')
+        script(src='/js/bootstrap.bundle.js')

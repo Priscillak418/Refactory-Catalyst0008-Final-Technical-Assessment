@@ -1,0 +1,28 @@
+body{
+	text-align:center;
+	justify-content: center;
+}
+form{
+	text-align:left;
+	margin:20px;
+	width:50%;
+	display:inline-block;
+}
+header a{
+	color:black;
+	margin:20px;
+}
+input:hover{
+	background-color:#f0f8ff;
+}
+input{
+	border:1px  solid #6495ed;
+}
+button{
+	width:100%;
+	border:0px;
+
+}
+small{
+margin-top:0 100px ;
+}

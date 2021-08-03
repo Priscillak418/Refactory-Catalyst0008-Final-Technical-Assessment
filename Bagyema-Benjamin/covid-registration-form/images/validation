@@ -1,0 +1,90 @@
+
+var validation=()=>{
+    let errorElement=document.getElementById("error")
+    let name=/^([a-zA-Z]{1,16})$/
+    let place=/^([A-Z]{1}[a-z]{0,19})$/
+    let work=/^([a-zA-Z]{5,50})$/
+    let nat=/^([A-Z]{1}[a-z]{4,19})$/
+    let dob={
+        var min=
+    }
+    
+    let fnameVal=document.getElementById("fname")
+    let lnameVal=document.getElementById("lname")
+    let genderVal=document.getElementById("gender")
+    let residenceVal=document.getElementById("residence")
+    let occupationVal=document.getElementById('occupation')
+    let originVal=document.getElementById('origin')
+    let dobVal=document.getElementById("dob")
+    //let form=document.getElementById("register")
+    let messages=[]
+    
+    
+        
+        
+    if(fnameVal.value.match(name)){
+    fnameVal.style.border="1px solid green"
+    }
+    else{
+    fnameVal.style.border="1px solid red"
+    //message displayed on error
+    errorElement.innerHTML="Name should have 1-16 characters."
+    return false
+    }
+    if(lnameVal.value.match(name)){
+        lnameVal.style.border="1px solid green"
+    }else{
+        lnameVal.style.border="1px solid red"
+        errorElement.innerHTML="Name should have 1-16 characters."
+        return false
+        //e.preventDefault()
+    } 
+    if(genderVal.value==""){
+            genderVal.style.border="1px solid red"
+            //messages.push("Select A Gender for the Worker")
+            errorElement.innerHTML="Select A gender for the patient."
+            return
+        }else{
+            genderVal.style.border="1px solid green"
+            //messages.push("Gender success")
+        } 
+            //This is where the Date Validation will take Place.//
+    if(dobVal.value.match(dob)){
+        dobVal.style.border="1px solid red"
+        //messages.push("Input date in format mm/dd/yy")
+        errorElement.innerHTML="Patient must be not younger than a year and not older than 150years."
+        return false    
+            }else{
+                dobVal.style.border="1px solid green"
+            }
+    if(residenceVal.value.match(place)){
+        residenceVal.style.border="1px solid green"
+    }else{
+        residenceVal.style.border="1px solid red"
+        errorElement.innerHTML="Residence must fit between 5-20 characters."
+        return false;
+    }
+    if(occupationVal.value.match(work)){
+        occupationVal.style.border="1px solid green"
+      }else{
+          occupationVal.style.border="1px solid red"
+          errorElement.innerHTML="Requires between 5-50 characters."
+          return false;
+      }
+      
+    if(originVal.value.match(nat)){
+        originVal.style.border="1px solid green"
+    }else{
+        originVal.style.border="1px solid red"
+        errorElement.innerHTML="Requires Capital letter and between 1-20 characters."
+        return false;
+    }
+    
+    
+    if(messages.length>0){
+        errorElement.innerText=messages.join(',')
+    }
+   
+    
+    
+}
