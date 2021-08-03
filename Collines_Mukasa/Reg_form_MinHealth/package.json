@@ -1,0 +1,22 @@
+{
+  "name": "reg_form_minhealth",
+  "version": "1.0.0",
+  "description": "Registration form for covid-19",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Collines Mukasa",
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12",
+    "passport": "^0.4.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {}
+}
