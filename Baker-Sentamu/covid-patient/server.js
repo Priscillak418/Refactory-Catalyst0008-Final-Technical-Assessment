@@ -3,6 +3,7 @@ const path = require('path');
 const moment = require('moment');
 const mongoose = require('mongoose');
 const register = require('./routes/registerRoute');
+const Register = require('./models/Register');
 
 require('dotenv').config()
 

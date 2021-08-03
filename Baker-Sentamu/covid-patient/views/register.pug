@@ -11,6 +11,11 @@ block content
                 .title COVID-19 (CORONA VIRUS)
                 .subtitle Virus Test Registration Form
 
+                if alert == "success"
+                    div.alert.alert-success Registration was successfull
+                if alert == "error"
+                    div.alert.alert-danger An error occurred, failed to Register
+
                 form.register(name='registration' action='/'  method='POST')
                     .form-row
                         .col-md-6.col-sm-12      
@@ -53,26 +58,26 @@ block content
                                 small.general-error
                     .form-row
                         .col-12
-                             label Choose Gender 
-                                br
-                            .custom-control.custom-radio.custom-control-inline
-                                input.custom-control-input(type="radio" id="male" name="male" default)
-                                label.custom-control-label(for="male") Male   
-                            .custom-control.custom-radio.custom-control-inline
-                                input.custom-control-input(type="radio" id="female" name="female")
-                                label.custom-control-label(for="male") Female  
-                                br        
-
+                             label Choose Gender
+                                .custom-control.custom-radio.custom-control-inline
+                                    input.custom-control-input(type="radio" id="male" name="male" default)
+                                    label.custom-control-label(for="male") Male   
+                                .custom-control.custom-radio.custom-control-inline
+                                    input.custom-control-input(type="radio" id="female" name="female")
+                                    label.custom-control-label(for="male") Female 
                     .form-row
                         .col-12            
-                            select.custom-select(name='category')
+                            select#category.custom-select(name='category')
                                 option(value='') -- Select Category --
                                 option(value="returnee") Returnee
                                 option(value="Contact") Contact
                                 option(value="Alert") Alert
-                                option(value="Volunteer") Volunteer         
+                                option(value="Volunteer") Volunteer 
+                            .show-error
+                                small#category-error
+                                small.general-error        
                             
                     .form-row
                         .col.form-group
                             br
-                            button#sumbit-washer.btn.btn-primary.btn-block(type="button" onclick="checkEmpty()") Register
+                            button#register-patient.btn.btn-primary.btn-block(type="button") Register
