@@ -1,0 +1,59 @@
+extends layout 
+block content
+        section.container
+            header.card-header#my-form
+                h4.card-title Ministry of Health
+                h3.card-title COVID-19 (CORONA VIRUS)
+                h4.card-title Virus -Test Registration Form
+                if alert == "success"
+                    div.alert.alert-info Registration was successful!
+                if alert == 'error'
+                    div.alert.alert-danger An error occured,failed to add patient 
+                form(action='/register' method='POST')
+                div.form-row
+                    div.col.form-group
+                        label Surname
+                        input.form-control(name='surname' id='surname' )
+                        span#surnameError(role='alert' aria-hidden='true')
+                    div.col.form-group
+                        label Given name
+                        input.form-control(name='givenname' id='givenname')
+                        span#givennameError(role='alert' aria-hidden='true')
+                div.form-row
+                    div.col.form-group
+                        label Date of Birth
+                        input.form-control(name='dateofbirth' id='dateofbirth' type='date')
+                        span#dobError(role='alert' aria-hidden='true')
+                    div.col.form-group
+                        label Place of residence
+                        input.form-control(name='placeofresidence' id='placeofresidence')
+                        span#placeofresidenceError(role='alert' aria-hidden='true')
+                div.form-row
+                    div.col.form-group
+                        label Occupation
+                        input.form-control(name='occupation' id='occupation')
+                        span#occupationError(role='alert' aria-hidden='true')
+                    div.col.form-group
+                        label Nationality
+                        input.form-control(name='nationality' id='nationality')
+                        span#nationalityError(role='alert' aria-hidden='true')
+                div.form-row
+                    div.col.form-group
+                        label(for='gender') Gender
+                        br
+                        input#gender.inline(type='radio' name='gender' value='gender')
+                        label(for='gender') Male
+                        input#gender.inline(type='radio' name='gender' value='gender')
+                        label(for='gender') Female
+                div.form-row
+                    div.col.form-group
+                        label Category
+                        input.form-control(name='category' id='category' placeholder='--Select Category--')
+                        span#catergoryError(role='alert' aria-hidden='true')                
+                div.form-row
+                    div.col.form-group
+                        button.btn.btn-primary.btn-block(type='submit')  Register    
+            script(src="/validation.js")
+
+
+            

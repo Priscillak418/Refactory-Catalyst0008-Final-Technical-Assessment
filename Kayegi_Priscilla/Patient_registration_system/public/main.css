@@ -1,0 +1,16 @@
+#my-form{
+  padding: 2rem;
+  background:white;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+input[type="radio"] {
+    margin-left:10px;
+}
+.my-female{
+    float: right;
+}
+h3.card-title{
+    font-style: bold;
+}
