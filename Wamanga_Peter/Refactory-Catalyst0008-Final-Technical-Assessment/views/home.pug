@@ -1,0 +1,54 @@
+extends layout  
+block content
+    #main.container
+        form#regform.col-lg-6.col-md-12.form.mx-auto(name='form' action='/home' method='POST' onsubmit="return validateform();" )
+            .row
+                .col-md-12
+                    img.logo(alt='' src='images/form-header-image.png')
+                    h5#mini Ministry of Health
+                    h3#mega COVID-19(CORONA VIRUS)
+                    h5#mini Virus-Test Registration Form
+                .col-md-6.form-field
+                    label.form-label(for='surName') Example label
+                    input#surName.form-control(name='surname' type='text' )
+                    small#surNameError.error
+                .col-md-6.form-field
+                    label(for='givenName') Given name
+                    input#givenName.form-control(name='givenname' type='text' )
+                    small#givenNameError.error
+           
+                .col-md-6.form-field
+                    label(for='givenName') Given name
+                    input#dob.form-control(name='dateofbirth' type='text' placeholder='Date of Birth' onfocus="(this.type='date')")
+                    small#dobError.error
+                .col-md-6.form-field
+                    label(for='address') Address
+                    input#address.form-control( name='address' type='text' )
+                    small#addressError.error
+                .col-md-6.form-field
+                    label(for='occupation') Occupation
+                    input#occupation.form-control(name='occupation' type='text')
+                    small#occupationError.error
+                .col-md-6.form-field
+                    label(for='nationality') Nationality
+                    input#nationality.form-control(name='nationality' type='text' )
+                    small#nationalityError.error
+                .form-check.form-check-inline
+                    input#inlineCheckbox1.form-check-input(type='radio' value='option1' checked="checked")
+                    label.form-check-label(for='inlineCheckbox1') Male
+                .form-check.form-check-inline
+                    input#inlineCheckbox2.form-check-input(type='radio' value='option2')
+                    label.form-check-label(for='inlineCheckbox2') Female
+
+                    small#genderError.error
+            .form-field
+                    select#gender.custom-select(name='category')
+                        option(value="none" selected disabled hidden) --Select Category--
+                        option(value='Returnee') Returnee
+                        option(value='Contact') Contact
+                        option(value='Alert') Alert
+                        option(value='Volunteer') Volunteer
+                    small#genderError.error
+            .form-field
+            button#submit.btn.btn-primary.btn-block(type='submit' ) Submit
+    script(src='/Validate.js')

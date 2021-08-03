@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+head
+  link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+  link(rel="stylesheet",href="/style.css",type= "text/css")
+  title Virus-Test Registration
+  
+body   
+    br
+    if alert == "success"
+        div.alert.alert-success Registration successful
+    if alert == "error"
+        div.alert.alert-danger An error occurred, failed to Register
+    
+    block content
+      br
+      br
+      footer.bg-light.text-center.text-lg-start
+        .footerthing
+        p.wampet &copy;2021 Wamanga Peter
+
